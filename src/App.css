@@ -1,38 +1,246 @@
-.App {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #87CEEB;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 9fr 10fr;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav ul li {
+  list-style: none;
+  width: 30%;
+  background-color: #00afef;
+  border-radius: 5px;
+  line-height: 35px;
+  padding: 10px;
+  margin: 10px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header img {
+  height: 100px;
+  width: auto;
+}
+
+header h1 {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "DYK DYK"
+  "Race Refreshed"
+  "footer footer";
+}
+
+main img {
+  object-fit: cover;
+  margin-right: 20px;
+  height: 350px;
+  width: 35%;
+}
+
+#DYK li:before {
+  content: '🍡';
+  margin-left: -31px;
+  padding-right: 8px;
+}
+
+main, section {
+  grid-area: footer;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+section {
+  background-color: #ffffff;
+  margin: 5px;
+}
+
+.store-button { /* used for store link in "Get refreshed" section */
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #00afef;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#DYK{
+  grid-area: DYK;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#Race{
+  grid-area: Race;
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: 
+      "bluepop tagline"
+      "bluepop brief";
+}
+
+#Race > img {
+  grid-area: bluepop;
+  justify-content: flex-start;
+  max-height: 180px;
+  height: 70%;
+  width: auto;
+}
+
+#Race h2 {
+  grid-area: tagline;
+  text-align:center;
+}
+
+#Refreshed{
+  grid-area: Refreshed;
+  align-self: center;
+  justify-items: center;
+  height: auto;
+}
+
+#Refreshed > h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+#footer {
+  height: 40px;
+}
+
+#contact-us{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#submitbutton{
+  width: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #00afef;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-style: none;
+}
+
+input, select{
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+      display: grid;
+      grid-template-columns: 1fr 9fr;
+      grid-template-areas: 
+          "logo headline"
+          "navs navs";
+      margin-left: 20px;
+      margin-right: 20px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header img {
+      grid-area: logo;
   }
-  to {
-    transform: rotate(360deg);
+
+  header h1 {
+      grid-area: headline;
+  }
+
+  header nav {
+      grid-area: navs;
+  }
+
+  header nav ul{
+      margin: 0;
+      width: 100%;
+      justify-items: stretch;
+      padding: 0;
+  }
+
+  main{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "DYK"
+      "Race"
+      "Refreshed"
+      "footer";
+  }
+
+  #DYK{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: left;
+      border-radius: 5px;
+  }
+
+  #DYK img {
+      width: 100%;
+  }
+
+  #Race {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "bluepop tagline"
+      "brief brief";
+  }
+
+  #Race h2 {
+      grid-area: tagline;
+      text-align:left;
+  }
+
+  #Race p {
+      grid-area: brief;
+  }
+
+  #Refreshed h2 {
+      text-align: center;
+  }
+
+  #Refreshed nav ul {
+      justify-content: center;
+      margin: 0;
+      padding: 0;
   }
 }
