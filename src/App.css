@@ -91,6 +91,10 @@ section {
   border-radius: 5px;
 }
 
+#DYK > div > ul {
+  list-style-type: none;
+}
+
 #Race{
   grid-area: Race;
   display: flex;
