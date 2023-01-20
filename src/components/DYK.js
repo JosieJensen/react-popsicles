@@ -1,5 +1,5 @@
 import React from "react";
-import rainpop from './popsicle-rainbow.jpg';
+import rainpop from '../images/popsicle-rainbow.jpg';
 
 const DYK = () => {
     return(

@@ -1,5 +1,5 @@
 import React from "react";
-import bluePop from './blue-pop.png';
+import bluePop from '../images/blue-pop.png';
 
 const Race = () => {
     return(

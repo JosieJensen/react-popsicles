@@ -5,13 +5,13 @@ import GetRefreshed from "./GetRefreshed";
 
 const HomePage = () => {
     return(
-        <>
+        
         <main>
             <DYK/>
             <Race/>
             <GetRefreshed/>
         </main>
-        </>
+        
     );
 }
 

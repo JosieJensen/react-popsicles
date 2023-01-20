@@ -1,5 +1,5 @@
-import './App.css';
-import logo from './te-pops.png';
+
+import logo from '../images/te-pops.png';
 
 
 const Header = () => { 
